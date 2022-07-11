@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <context:annotation-config/>
+ 
+ 
+ 
+ 
+ <!-- First  -->
+<bean id="que1" class="One.Role"
+	  factory-method="getObjA">
+</bean>
+<!-- First End -->
+ 
+ 
+ 
+ <!--Second  -->
+ <bean id="que2" class="Two.Average">
+		<property name="n1" value="44"></property>
+		<property name="n2" value="95"></property>
+		<property name="n3" value="88"></property>
+		<property name="n4" value="19"></property>
+ </bean>
+ <!--Second End  -->
+ 
+ 
+ 
+ 
+ <!-- Third -->
+ <bean id="questt" class="Three.Emi">
+		<property name="rate" value="7.8"></property>
+ </bean>
+ <!-- Third End -->
+ 
+ 
+
+<!--   Fourth  -->
+<bean id="depart" class="Fourth.Department">
+<property name="Dname" value="Insurance"></property>
+<property name="location" value="Insurance"></property>
+</bean>
+
+<bean id="emp" class="Fourth.Employee">
+<property name="id" value="12"></property>
+<property name="name" value="ravi"></property>
+<property name="salary" value="12000"></property>
+</bean> 
+<!--  Fourth  End  -->
+
+
+
+
+
+<!-- Fifth -->
+<bean id="questF" class="Five.Static"
+	   factory-method="getObject">
+</bean>
+<!-- Fifth End -->
+
+
+
+
+
+<!--Six Starts  -->
+<bean id="vow" class="Six.Vowel">
+<property name="str">
+<array>
+<value>omkar</value>
+<value>jojo</value>
+<value>scrpt</value>
+<value>fly</value>
+<value>vowel</value>
+</array>
+</property>
+</bean>  
+<!-- Six ends -->
+
+
+
+
+<!--  Seven starts       -->
+<bean id="First" class="Seven.First">
+<property name="arr1">
+<array>
+<value>12</value>
+<value>99</value>
+<value>56</value>
+<value>97</value>
+</array>
+</property>
+</bean>
+
+<bean id="Sec" class="Seven.Second">
+<property name="arr2">
+<array>
+<value>22</value>
+<value>42</value>
+</array>
+</property>
+</bean> 
+<!-- Seven End    -->
+
+
+
+
+<!--  Eight start   -->
+<bean id="ii" class="Eight.Items">
+<property name="item">
+<list>
+<value>FlowerPot</value>
+<value>Clock</value>
+<value>Siccors</value>
+<value>RedClif</value>
+<value>Hanger</value>
+<value>RedClif</value>
+</list>
+</property>
+</bean> 
+
+
+<!--  Eight end    -->
+
+
+
+<!--Nine   -->
+<bean id="quest91"
+        class="Nine.Distance">
+        <property name="fromcity" value="mumbai"></property>
+        <property name="tocity" value="bangalore"></property>
+        <property name="distance" value="992"></property>
+    </bean>
+
+    <bean id="quest92"
+        class="Nine.Distance">
+        <property name="fromcity" value="pune"></property>
+        <property name="tocity" value="kolhapur"></property>
+        <property name="distance" value="250"></property>
+    </bean>
+
+    <bean id="quest93"
+        class="Nine.Distance">
+        <property name="fromcity" value="pune"></property>
+        <property name="tocity" value="mumbai"></property>
+        <property name="distance" value="150"></property>
+    </bean>
+
+    <bean id="quest94"
+        class="Nine.Distance">
+        <property name="fromcity" value="indore"></property>
+        <property name="tocity" value="pune"></property>
+        <property name="distance" value="590"></property>
+    </bean>
+<!-- Nine End -->
+
+
+
+
+<!-- Ten  -->
+<bean class="Ten.Student" id="questten">
+        <property name="std">
+            <map>
+                <entry key="Nikhil" value="80" />
+                <entry key="Payal" value="90" />
+                <entry key="Dipesh" value="95" />
+                <entry key="Pooja" value="85" />
+            </map>
+        </property>
+
+</bean>
+<!-- Ten End -->
+
+
+
+
+<!--                 Eleven start     -->
+
+<bean id="que11a" class="Eleven.Result">
+		<constructor-arg value="56"></constructor-arg>
+		<constructor-arg value="80"></constructor-arg>
+		<constructor-arg value="85"></constructor-arg>
+		<constructor-arg value="77"></constructor-arg>
+	</bean>
+
+	<bean id="que11b" class="Eleven.Student">
+		<constructor-arg value="Nikhil"></constructor-arg>
+		<constructor-arg value="111"></constructor-arg>
+		<constructor-arg value="17-11-1996"></constructor-arg>
+		<constructor-arg value="12th"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+		<constructor-arg>
+			<ref bean="que11a" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="que11c" class="Eleven.Result">
+		<constructor-arg value="66"></constructor-arg>
+		<constructor-arg value="87"></constructor-arg>
+		<constructor-arg value="75"></constructor-arg>
+		<constructor-arg value="67"></constructor-arg>
+
+	</bean>
+	<bean id="que11d" class="Eleven.Student">
+		<constructor-arg value="Payal"></constructor-arg>
+		<constructor-arg value="112"></constructor-arg>
+		<constructor-arg value="17-5-96"></constructor-arg>
+		<constructor-arg value="10th"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+		<constructor-arg>
+			<ref bean="que11c" />
+		</constructor-arg>
+	</bean>
+
+ 
+<!--             Eleven end                -->
+
+
+
+
+
+
+
+<!-- Twelve -->
+
+ <bean id="quea"
+        class="Twelve.Employee">
+        <property name="ename" value="manoj"></property>
+        <property name="salary" value="40000"></property>
+        <property name="dept" value="development"></property>
+    </bean>
+	  <bean id="queb"
+        class="Twelve.Employee">
+        <property name="ename" value="priya"></property>
+        <property name="salary" value="42000"></property>
+        <property name="dept" value="development"></property>
+    </bean>
+	
+	  <bean id="quec"
+        class="Twelve.Employee">
+        <property name="ename" value="dinesh"></property>
+        <property name="salary" value="41000"></property>
+        <property name="dept" value="h.r"></property>
+    </bean>
+	  <bean id="qued"
+        class="Twelve.Employee">
+        <property name="ename" value="kiran"></property>
+        <property name="salary" value="34000"></property>
+        <property name="dept" value="h.r"></property>
+    </bean>
+	
+<!--Twelve End  -->
+
+
+
+
+
+
+<!-- Thirteen -->
+<bean id="cust"
+        class="Thirteen.System1">
+        <property name="movieName" value="Pushpa"></property>
+        <property name="showTime" value="4-7"></property>  
+        <property name="pot" value="60"></property>
+        <property name="businessInCrore" value="820 crore"></property>  
+    </bean>
+<!--  Thirteen End-->
+
+
+
+
+
+</beans>
